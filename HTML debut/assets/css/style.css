@@ -1,0 +1,40 @@
+body {
+    margin:0;
+    font-family:Cambria, serif;
+}
+
+.titre{
+    background-color: brown;
+    color: cornsilk;
+}
+
+img{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1px;
+    width: 150px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: azure;
+}
+
+li {
+    float:left;
+}
+
+li a {
+    display:block;
+    color: blueviolet;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: coral;
+}

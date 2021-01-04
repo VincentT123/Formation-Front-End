@@ -1,0 +1,132 @@
+
+@font-face {
+    font-family: police;
+    src: url("../font/SourceSansPro-Regular.ttf");
+}
+body {
+    margin: 0;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.box>* {
+    flex: 1 1 160px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-align: center;
+}
+
+li {
+    float: none;
+    display: inline-block;
+    *display: inline;
+    /* ie7 fix */
+    *zoom: 1;
+    /* hasLayout ie7 trigger */
+    vertical-align: top;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.grid {
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.enfant img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.fluid {
+    margin: 20px;
+}
+
+.container {
+    display: block;
+    top: 0;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.term{
+    margin-top:15px
+}
+
+.un {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: burlywood;
+}
+
+.deux {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: blueviolet;
+}
+
+article {
+    height: 700px;
+    float: left;
+    background-color: #66FFFF;
+    width: 70%;
+}
+
+aside {
+    height: 700px;
+    float: right;
+    width: 30%;
+    background-color: yellow;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: #45a1ff;
+    color: #fff;
+}
+
+.footer p {
+    color: white;
+    text-align: center;
+}
+
+.conteneur {
+    display: flex;
+    justify-content: space-between;
+}
+
+.enfant {
+    margin: 25px;
+    flex-basis: 200px;
+    background-color: yellow;
+}

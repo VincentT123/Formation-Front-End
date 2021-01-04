@@ -1,0 +1,35 @@
+
+/*@font-face {
+    font-family: learningcurve;
+    src: url("../font/LearningCurve.ttf");
+}*/
+body {
+    margin: 0;
+    /*font-family: "learningcurve";*/
+}
+.navbar ul{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: cadetblue;
+}
+.navbar-item{
+   float: left; 
+}
+.navbar-item a{
+    display: block;
+    color: cornsilk;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar-item a:hover{
+    background-color: darkgrey;
+}
+.active {
+    background-color: darkblue;
+}

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/file.js"></script>
+    <script>
+        function afficheTableau(t) {
+            document.writeln('<p>le tableau est :</p>');
+            document.writeln('<table border="1"><tr>');
+            for (var i = 0; i < t.length; i++) {
+                document.writeln('<td>', t[i], '</td>');
+            }
+            document.writeln('</tr></table>');
+        }    /* Calcule et affiche la moyenne des éléments d'un tableau */
+        function afficheMoyenne(t) {
+            var somme = 0;
+            for (var i = 0; i < t.length; i++) {
+                somme = somme + t[i];
+            }
+            document.writeln('<p>La moyenne vaut ', (somme / t.length), '</p>');
+        }    /* Compte et affiche le nombre d'apparitions d'un élément dans un tableau */
+        function occurrences(x, t) {
+            var nbreOccurences = 0;
+            for (var i = 0; i < t.length; i++) {
+                if (t[i] == x) {
+                    nbreOccurences = nbreOccurences + 1;
+                }
+            }
+            document.writeln('<p>', x, ' apparaît ', nbreOccurences, ' fois.</p>');
+        }    /* Compte et affiche combien ont eu 10 ou plus */
+        function ontEuLaMoyenne(t) {
+            var nbreMoyenne = 0;
+            for (var i = 0; i < t.length; i++) {
+                if (t[i] >= 10) {
+                    nbreMoyenne = nbreMoyenne + 1;
+                }
+            }
+            document.writeln('<p>', nbreMoyenne, ' ont eu la moyenne.</p>');
+        }    /* Indique si un élément est présent dans un tableau ou non */
+        function recherche(x, t) {
+            var i = 0;
+            while ((i < t.length) && (t[i] != x)) {
+                i = i + 1
+            }
+            if (t.includes(x)) {
+                document.writeln('<p>', x, ' est présent.</p>');
+            } else {
+                document.writeln('<p>', x, ' n\'est pas présent.</p>');
+            }
+        }
+        /* appels aux procédures définies ci-dessus */
+        var notes = [5, 12, 8, 20, 10];
+        notes[2] = 9; afficheTableau(notes);
+        afficheMoyenne(notes);
+        occurrences(12, notes);
+        occurrences(2, notes);
+        ontEuLaMoyenne(notes);
+        recherche(12, notes);
+        recherche(10, notes);
+
+        //exo 1
+        var d = new Date();
+        var date = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+        var hours = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        var fullDate = date + ' ' + hours;
+        document.writeln("<p>", fullDate, "</p>");
+
+        //exo 2
+        var tab1 = [31, 11, 45, 12];
+        function prem(tab) {
+            var x = 0;
+            x = tab[0];
+            document.writeln("<p>", x, "</p>");
+            return x;
+        }
+        prem(tab1);
+
+        //exo 2
+        //multiplication
+        var a = 10;
+        var b = 8;
+        function mul(x, y) {
+            var tot = x * y;
+            return tot;
+        }
+        var multi = mul(a, b);
+        document.writeln("<p>", multi, "</p>");
+        //soustraction
+        var a = 10;
+        var b = 8;
+        function sous(x, y) {
+            var tot = x - y;
+            return tot;
+        }
+        var soustra = sous(a, b);
+        document.writeln("<p>", soustra, "</p>");
+        //division
+        var a = 10;
+        var b = 8;
+        function div(x, y) {
+            var tot = x / y;
+            return tot;
+        }
+        var divi = div(a, b);
+        document.writeln("<p>", divi, "</p>");
+        //Q3
+        var min = 30;
+        function mintosec(a) {
+            x = a * 60;
+            return x;
+        }
+        var res = mintosec(min);
+        document.writeln("<p>", res, "</p>");
+        //Q4
+        var age = 40;
+        function anstojours(a) {
+            var x = a * 365;
+            return x;
+        }
+        var res = anstojours(age);
+        document.writeln("<p>", res, "</p>");
+
+        //Exo 3
+        //Q1
+        var nb = 67;
+        document.writeln("<pre>", 12, " on s'amuse bien ici ", nb, "</pre>");
+        document.writeln("<pre>", 12, " on s'amuse bien ici ", nb, "</pre>");
+        document.writeln(12, " on s'amuse bien ici ", nb);
+        document.writeln(12, " on s'amuse bien ici ", nb);
+        document.write("<pre>", 12, " on s'amuse bien ici ", nb, "</pre>");
+        document.write("<pre>", 12, " on s'amuse bien ici ", nb, "</pre>");
+        document.write(12, " on s'amuse bien ici ", nb);
+        document.write(12, " on s'amuse bien ici ", nb);
+        document.writeln("<br>");
+        //Q2
+        var temp = 25;
+        var seuil = 30;
+        function testtemp(a, b) {
+            if (a < b) {
+                document.writeln("la température actuelle de ", a, " °C est inférieure au seuil (", b, " °C)", "<br>");
+            } else {
+                document.writeln("la température actuelle(", a, " °C est supérieure ou égale au seuil (", b, " °C)", "<br>");
+            }
+        }
+        testtemp(temp, seuil);
+        //Q3
+        for (var i = 1; i < 101; i++) {
+            document.writeln(i);
+        }
+        document.writeln("<br>");
+        var i = 1;
+        while (i < 101) {
+            document.writeln(i);
+            i++;
+        }
+        document.writeln("<br>");
+
+        //Exo 4
+        var test = 12 % 3;
+        document.writeln(test);
+        function iter() {
+            for (i = 1; i < 101; i++) {
+                var a = "";
+                if (((i % 3) == 0) && ((i % 5) == 0)) {
+                    document.writeln("FizzBuzz");
+                } else if ((i % 3) == 0) {
+                    document.writeln("Fizz");
+                } else if ((i % "5") == 0) {
+                    document.writeln("Buzz");
+                } else {
+                    document.writeln(i);
+                }
+
+            }
+        }
+        iter();
+
+        //Exo 5
+        var tab2 = [2, 3, 4, 5];
+        function sommeprod(tab) {
+            var x = 0;
+            var y = 1;
+            for (i = 0; i < tab.length; i++) {
+                x = x + tab[i];
+                y = y * tab[i];
+            }
+            document.writeln("<br>", "somme des nombres du tableau : ", x);
+            document.writeln("<br>", "produit des nombres du tableau : ", y, "<br>");
+        }
+        sommeprod(tab2);
+
+        //Exo 6
+        function pairimpair() {
+            for (i = 0; i < 16; i++) {
+                if (i % 2 == 0) {
+                    document.writeln(i, " est pair - ");
+                } else {
+                    document.writeln(i, " est impair - ");
+                }
+            }
+        }
+        pairimpair();
+        document.writeln("<br>");
+
+        //Exo 7
+        var tabnom = [];
+        function addNom() {
+            var nom = prompt("Ajouter un nom : ");
+            tabnom.push(nom);
+            console.log(tabnom);
+        }
+        function tirage() {
+            var x = tabnom.length * Math.random();
+            console.log(x);
+            x = Math.floor(x);
+            console.log(x);
+            console.log(tabnom[x]);
+            document.writeln("<br>", "Nom tiré au sort : ", tabnom[x], "<br>");
+        }
+        document.writeln("<button type='button' onclick='addNom()'>Ajouter Nom</button>");
+        document.writeln("<button type='button' onclick='tirage()'>Tirage au sort</button>");
+        // for (i = 0; i < tabnom.length; i++) {
+        //     document.writeln(" ", tabnom[i], " ");
+        // }
+        // function addNom() {
+        //     var nom = prompt("Ajouter un nom : ");
+        //     tabnom.push(nom);
+        //     for (var elt of tabnom) {
+        //         console.log(tabnom);
+        //         document.writeln(tabnom);
+        //     }
+        // }
+        // document.writeln("<button type='button' onclick='addNom()'>Ajouter Nom</button>");
+
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <!--<nav class="navbar">
+            <ul>
+                <li class="navbar-item active"><a href="index.html">Home</a></li>
+                <li class="navbar-item"><a href="#">Page 2</a></li>
+                <li class="navbar-item"><a href="#">Page 3</a></li>
+                <li class="navbar-item"><a href="#">About</a></li>
+            </ul>
+        </nav>-->
+    </header>
+
+    <div class="container">
+
+        <!-- <button onclick="maFonction()">Cliquer ici</button><br>
+        <button onclick="saisirNom()">Cliquer là</button><br>
+        <button onclick="test()">Cliquer encore ici</button><br> -->
+
+
+    </div>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>

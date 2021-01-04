@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/file3.js"></script>
+    <script>
+        function addit() {
+            var nb1 = document.calc.nbr1.value;
+            var nb2 = document.calc.nbr2.value;
+            var res = parseFloat(nb1) + parseFloat(nb2);
+            document.calc.resultat.value = res;
+        }
+        function soust() {
+            var nb1 = document.calc.nbr1.value;
+            var nb2 = document.calc.nbr2.value;
+            var res = parseFloat(nb1) - parseFloat(nb2);
+            document.calc.resultat.value = res;
+        }
+        function multi() {
+            var nb1 = document.calc.nbr1.value;
+            var nb2 = document.calc.nbr2.value;
+            var res = parseFloat(nb1) * parseFloat(nb2);
+            document.calc.resultat.value = res;
+        }
+        function divis() {
+            var nb1 = document.calc.nbr1.value;
+            var nb2 = document.calc.nbr2.value;
+            var res = parseFloat(nb1) / parseFloat(nb2);
+            document.calc.resultat.value = res;
+        }
+    </script>
+</head>
+
+<body>
+
+    <form name="calc">
+        <input type="text"name="nbr1"/><br>
+        <input type="text"name="nbr2"/><br>
+        <button type='button' onclick="addit()"> + </button>
+        <button type='button' onclick="soust()"> - </button>
+        <button type='button' onclick="multi()"> * </button>
+        <button type='button' onclick="divis()"> / </button><br>
+        <input type="text"name="resultat"/><br>
+    </form>
+
+</body>
+
+</html>

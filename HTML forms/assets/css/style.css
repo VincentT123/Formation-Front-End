@@ -1,0 +1,88 @@
+
+/* comments */
+@font-face {
+    font-family: learningcurve;
+    src: url("../font/LearningCurve.ttf");
+}
+body {
+    margin: 0;
+    /*font-family: "learningcurve";*/
+    background: linear-gradient(to bottom right, blue, white);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background: -ms-linear-gradient(bottom left, red, blue);
+    background: -moz-linear-gradient(top left, red, blue);
+    background: -webkit-linear-gradient(top left, red, blue);*/
+}
+.navbar ul{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: cadetblue;
+}
+.navbar-item{
+   float: left; 
+}
+.navbar-item a{
+    display: block;
+    color: cornsilk;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar-item a:hover{
+    background-color: darkgrey;
+}
+.active {
+    background-color: darkblue;
+}
+.container {
+    display: block;
+    margin: 65px;
+}
+p.rouge {
+    color:red;
+}
+p.vert {
+    color:green;
+}
+p.noir {
+    color:black;
+}
+div.code, div.exemple {
+    font-family: 'Courier New', Courier, monospace;
+}
+ol li {
+    background-color: greenyellow;
+}
+.gradient-vertical
+{
+    width:400px;
+    height: 200px;
+    background: -ms-linear-gradient(top, red, blue);
+    background: -moz-linear-gradient(top, red, blue);
+    background: -webkit-linear-gradient(top, red, blue);
+}
+.gradient-horizontal
+{
+    width:400px;
+    height: 200px;
+    background: -ms-linear-gradient(left, red, blue);
+    background: -moz-linear-gradient(left, red, blue);
+    background: -webkit-linear-gradient(left, red, blue);
+}
+.footer {
+    background-color: cadetblue;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding-top: 50px;
+    height: 50px;
+}.footer p {
+    color: white;
+    text-align: center;
+}

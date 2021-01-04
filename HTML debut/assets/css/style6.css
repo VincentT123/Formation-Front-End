@@ -1,0 +1,23 @@
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: azure;
+}
+
+.navbar-link {
+    float:left;
+}
+
+.navbar-item {
+    display:block;
+    color: blueviolet;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar-item:hover {
+    background-color: coral;
+}
